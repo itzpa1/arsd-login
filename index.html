@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/output.css">
+    <title>ERp</title>
+</head>
+
+<body>
+    <div class="hero bg-[#00154e] h-screen flex flex-col items-center w-screen">
+        <div class="header w-full h-auto p-5">
+            <div class="control-btn w-full h-10 flex justify-between">
+                <button
+                    class="flex rounded-md items-center justify-center px-2 bg-blue-400 text-white font-bold hover:text-blue-400 hover:bg-white transition duration-300"><span
+                        class="material-symbols-outlined pr-1">
+                        arrow_back_ios
+                    </span> BACK</button>
+                <button
+                    class="flex rounded-md items-center justify-center px-2 bg-blue-400 text-white font-bold hover:text-blue-400 hover:bg-white transition duration-300"><span
+                        class="material-symbols-outlined pr-1">
+                        home
+                    </span> HOME</button>
+            </div>
+            <div class="logo mt-5 w-full h-auto flex justify-center">
+                <img src="https://www.arsdcollege.ac.in/wp-content/uploads/2022/05/ARSD-logo-2.png" class="w-3/4 md:w-1/4" alt="arsd-logo">
+            </div>
+        </div>
+        <div
+            class="main-container w-5/6 md:w-2/6 bg-slate-100 h-auto mt-5 rounded-lg flex flex-col items-center p-5 shadow-md shadow-slate-100">
+            <h1 class="font-bold text-2xl text-red-500">Login</h1>
+            <div class="login-type flex flex-col gap-1 md:flex-row justify-evenly w-full md:mt-14 mt-4">
+                <button
+                    class="flex items-center justify-center font-bold rounded-full border-2 border-[#00154e] text-[#00154e] px-2 hover:bg-[#00154e] hover:text-white transition duration-300">Student
+                    <span class="ml-2 text-xl material-symbols-outlined">
+                        school
+                    </span></button>
+                <button
+                    class="flex items-center justify-center font-bold rounded-full border-2 border-[#00154e] text-[#00154e] px-2 hover:bg-[#00154e] hover:text-white transition duration-300">Faculty
+                    <span class="ml-2 text-xl material-symbols-outlined">
+                        license
+                    </span></button>
+                <button
+                    class="flex items-center justify-center font-bold rounded-full border-2 border-[#00154e] text-[#00154e] px-2 hover:bg-[#00154e] hover:text-white transition duration-300">Admin
+                    <span class="ml-2 text-xl material-symbols-outlined">
+                        lock
+                    </span></button>
+            </div>
+            <form action="" class="login-page mt-4 md:mt-8 w-full md:w-3/4">
+                    <div class="userid w-full">
+                        <label for="userId" class="text-md text-[#00154e] font-semibold">User Id</label><br>
+                        <input class="border-2 border-[#00154e] w-full rounded-md pl-2 h-8" type="text" name="userId"
+                            id="userID" placeholder="Username" required>
+                    </div>
+                    <div class="pass w-full my-2 md:my-5">
+                        <label for="Password" class="text-md font-semibold">Password</label><br>
+                        <div
+                            class="password-box border-2 border-[#00154e] text-[#00154e] w-full rounded-md flex justify-between px-2 h-8 items-center bg-white">
+                            <input class="w-full outline-none" type="password" name="Password" id="password"
+                                placeholder="Password" required>
+                            <!-- <span class="material-symbols-outlined">
+                            visibility_off
+                        </span> -->
+                            <span class="material-symbols-outlined cursor-pointer" id="eyeIcon">
+                                visibility
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="text-blue-600">Forgot password?</a><br>
+
+                    <button
+                        class="my-5 w-full flex items-center justify-center font-bold rounded-full bg-[#00154e] border-2 text-white py-2 hover:bg-slate-100 hover:text-[#00154e] hover:border-[#00154e] transition duration-300"
+                        type="submit">Login
+                        <span class="ml-2 material-symbols-outlined">
+                            login
+                        </span></button>
+            </form>
+        </div>
+    </div>
+    <script>
+
+        let eyeicon = document.getElementById("eyeIcon");
+        let password = document.getElementById("password");
+
+        eyeicon.onclick = function () {
+            if (password.type == "password") {
+                password.type = "text";
+                eyeicon.innerText = "visibility_off";
+            } else {
+                password.type = "password";
+                eyeicon.innerText = "visibility";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
